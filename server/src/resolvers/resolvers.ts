@@ -12,6 +12,7 @@ export const resolvers = {
         register: async (_: any, { email, password, firstName, lastName, username }: GQL.IRegisterOnMutationArguments) => {
             const userModel = UserModel()
             const user = await userModel.register(email, password, firstName, lastName, username)
+            console.log(user)
             return user
         },
 

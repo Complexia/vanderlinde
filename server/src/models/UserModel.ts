@@ -29,7 +29,8 @@ export const UserModel = (): any => {
                 }
             }
         }
-        return {user}
+        
+        return { user }
     }
 
     //todo: pass an object as a parameter from resolvers instead of individual variables
@@ -43,12 +44,19 @@ export const UserModel = (): any => {
             lastName,
             username
         })
+
+        if (!user) {
+            return {
+                error: {
+                    field: "Registration",
+                    message: "Something went wrong"
+                }
+            }
+        }
         //user.password = hashedPassword
         await user.save()
         
-        return {
-            user
-        }
+        return { user }
         
     }
 

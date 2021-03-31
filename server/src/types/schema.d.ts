@@ -53,7 +53,7 @@ declare namespace GQL {
 
   interface IMutation {
     __typename: 'Mutation';
-    register: IUser;
+    register: IReturnValueLoginRegister | null;
     login: IReturnValueLoginRegister | null;
   }
 
