@@ -4,7 +4,7 @@ import TradeWindow from "../components/TradeWindow"
 
 function Home() {
     return (
-        <div>
+        <div className="background">
 
             <NavigationBar />
 
