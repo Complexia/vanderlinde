@@ -8,7 +8,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 
 
-
+//put this in .env
 let uriLocal = "http://localhost:4000/graphql"
 
 const client = new ApolloClient({

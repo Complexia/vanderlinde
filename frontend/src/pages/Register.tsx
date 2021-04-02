@@ -4,6 +4,24 @@ import Button from 'react-bootstrap/Button'
 import '../stylesheets/forms.css'
 function Register() {
 
+
+    // const loginUser = gql`
+    //     mutation login($email: String!, $password: String!) {
+    //         login(email: $email, password: $password) {
+    //             user {
+    //                 email
+    //             }
+    //             error {
+    //                 field
+    //                 message
+    //             }
+    //         }
+    //     }
+    // `;
+
+
+
+
     return (
         <div className="background">
             <NavigationBar />

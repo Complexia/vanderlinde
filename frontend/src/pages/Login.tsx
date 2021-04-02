@@ -2,18 +2,13 @@ import NavigationBar from "../components/NavigationBar";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import '../stylesheets/forms.css'
-import { ApolloClient, InMemoryCache, gql, useMutation } from '@apollo/client';
+import { gql, useMutation } from '@apollo/client';
 import { useHistory } from 'react-router-dom';
 import { useState } from "react";
 
 
 function Login() {
 
-    let uriLocal = "http://localhost:4000/graphql"
-            const client = new ApolloClient({
-                uri: uriLocal,
-                cache: new InMemoryCache()
-            });
 
     const loginUser = gql`
         mutation login($email: String!, $password: String!) {
@@ -29,6 +24,7 @@ function Login() {
         }
     `;
 
+    //console.log data to see what's there //undefined it was
     const [login, { data }] = useMutation(loginUser);
     const [userData, setUserData] = useState<any>("")
     const history = useHistory();
@@ -55,12 +51,8 @@ function Login() {
         
         let email = e.target.email.value
         let password = e.target.password.value
-        
-        
-        const returnedUser = await returnUser(email, password)
-        
-        let jsonUser = JSON.stringify(returnedUser)
-        
+        let returnedUser = await returnUser(email, password)
+        let jsonUser = JSON.stringify(returnedUser)   
         let jUser = JSON.parse(jsonUser)
 
         if(jUser.data.login.user) {
@@ -72,9 +64,6 @@ function Login() {
             //logs the error, next step to display it
             console.log(jUser.data.login.error.field)
         }
-        
-        
-
         
     }
 
