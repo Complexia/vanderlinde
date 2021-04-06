@@ -81,7 +81,7 @@ function Login() {
                 } }>
 
                     <Form.Group>
-                        <Form.Label className="formTag">Username: </Form.Label>
+                        <Form.Label className="formTag">Email: </Form.Label>
                         <Form.Control name="email" placeholder="Enter email: " />
                     </Form.Group>
 

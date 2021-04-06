@@ -2,9 +2,9 @@
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
-    "username": "remi",
+    "username": "postgres",
     "password": "postgres",
-    "database": "vanderlinde-db",
+    "database": "vanderlinde",
     "synchronize": true,
     "logging": false,
     "entities": [

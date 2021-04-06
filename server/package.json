@@ -1,14 +1,14 @@
 {
-  "name": "dogetute",
+  "name": "vanderlinde",
   "version": "0.0.0",
-  "description": "",
+  "description": "Open smart contract marketplace",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "files": [
     "build/src"
   ],
   "keywords": [],
-  "license": "Apache 2.0",
+  "license": "MIT License",
   "scripts": {
     "start": "npx ts-node src/index.ts",
     "dev": "nodemon --exec ts-node --files src/index.ts",
